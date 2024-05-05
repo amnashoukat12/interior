@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interior Plus</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      overflow-x: hidden;
+      font-family: 'League Spartan', sans-serif;
+      margin: 0; 
+      padding: 0;
+      position: relative; 
+    }
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      transition: background-color 0.5s ease; 
+    }
+
+    .navbar.colorful {
+      background-color: #222222; 
+    }
+
+    
+    .navbar-brand, .navbar-nav .nav-link {
+      color: white; 
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+    }
+
+    .navbar-nav .nav-link {
+      margin-right: 15px; 
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: gray; 
+    }
+
+    .social-icons i {
+      font-size: 20px; 
+      margin-left: 20px;
+    }
+
+    .navbar-nav .nav-link,
+    .navbar-nav .nav-link i,
+    .social-icons a,
+    .social-icons i {
+      color: #fff;
+    }
+
+    .navbar-nav .nav-link.custom-color {
+      color: white; 
+    }
+
+    .social-icons a {
+      margin-right: 10px;
+    }
+
+    .social-icons a:hover {
+      color: gray;
+    }
+
+    /*..................................................*/
+    
+    .first-section {
+      background-image: url('3.jpg'); 
+      background-size: cover;
+      background-position: center;
+      color: white; 
+      padding: 250px 0; 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      height: 100vh; 
+    }
+
+    .first-section h1{
+       text-align: center; 
+       font-weight: bold;
+       font-size: 40px;
+       margin-top: 14%;
+       transition: color 0.5s ease; 
+    }
+    .first-section p {
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      transition: color 0.5s ease; 
+    }
+
+    /*....................................*/
+
+    .about-section {
+      padding: 50px 0;
+      background-color:#40392C;
+    }
+
+    .about-content {
+      display: flex;
+      align-items: center;
+    }
+
+    .about-content img {
+      max-width: 100%; 
+      margin-right: 20px;
+    }
+    .about-content h2{
+      font-weight: bold;
+      font-size: 60px;
+      margin-top: 18%;
+      color: #fff;
+    }
+    .about-content p {
+      font-size: 18px;
+      color: #fff;
+    }
+
+    .about-content .custom-btn {
+      margin-top: 18px;
+      font-weight: bold;
+      background-color:#96A086; 
+      color:#fff;
+    }
+    .about-content .custom-btn:hover {
+       background-color:#fff; 
+      color:#96A086;
+    }
+
+    /*......................................*/
+
+     .services-section{
+      padding-top: 3%;
+      background-color: #43352a;
+     }
+      .services-section h1{
+      text-align: center;
+      font-weight: bold;
+      color: white;
+      }
+      .services-section h5{
+         text-align: center;
+        font-weight: bold;
+        font-size: 30px;
+      
+      }
+      .services-section p{
+          text-align: center;
+      }
+      .services-section .custom-btn{
+      font-weight: bold;
+      background-color:#40392C; 
+      color:#fff;
+      }
+      .services-section .custom-btn:hover{
+        background-color:#96A086; 
+      }
+      .card{
+            box-shadow: 0px 7px 10px rgba(0,0,0,0.9);
+            margin-bottom: 40px;
+      }
+
+      /*........................................*/
+
+      .feature-section {
+        padding-top: 3%;
+        background-color: #40392C;
+      }
+
+      .feature-section h1 {
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        font-weight: bold;
+        font-size: 40px;
+
+      }
+        .feature-section .img {
+          max-width: 300px; 
+          margin: 0 auto; 
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 30px;
+        }
+        .overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+       
+      }
+      .overlay h3 {
+        margin-bottom: 10px;
+      }
+      
+      /*...........................................*/
+      .footer{
+        background-color: #211a14;
+      }
+      .footer h4{
+        margin-top: 20px;
+        color: #fff;
+        font-weight: bold;
+      }
+      .footer p{
+        color: #fff;
+      }
+  </style>
+
+
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark ">
+  <div class="container">
+    <a class="navbar-brand" href="#">Interior Plus</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link custom-color" href="#home">Home</a> 
+        </li>
+        <li class="nav-item">
+          <a class="nav-link custom-color" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link custom-color" href="#services">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link custom-color" href="#feature">Features</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link custom-color" href="#"><i class="fas fa-search"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link custom-color" href="#"><i class="fas fa-shopping-cart"></i></a>
+        </li>
+      </ul>
+
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ....................................................... -->
+
+<section class="first-section" id="home">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Welcome to Interior Plus</h1>
+        <p>At our Interior Design Haven, we don't just transform spaces; we craft dreams.<br> Welcome to a sanctuary where luxury meets functionality,<br> and where every design decision is made with your utmost satisfaction in mind.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ......................................................... -->
+
+<section id="about" class="about-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="about-content">
+          <img src="about.png" alt="About Image">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="about-content">
+          <div>
+            <h2>About Us</h2>
+            <p>At Home-Designing, we curate a treasure trove of inspiration. Our mission is to offer our readers an abundant array of resources to envision, craft, and nurture exquisite homes. We're dedicated to presenting captivating visuals that ignite your creativity.Our platform delves into architectural marvels, showcases innovative living spaces, provides room-specific ideas, explores emerging design trends, highlights must-have products, and sprinkles in occasional decor advice. Our goal is to evolve into your ultimate destination for home design inspiration!</p>
+            <button class="btn custom-btn">Shop Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ....................................................... -->
+
+<section id="services" class="services-section">
+  <h1 class="heading">Services</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card mt-5" style="width: 100%;">
+          <img src="4.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Radimate</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn custom-btn">Order Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mt-5" style="width: 100%;">
+          <img src="10.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Custumise</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn custom-btn">Order Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mt-5" style="width: 100%;">
+          <img src="6.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Steel & Foam</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn custom-btn">Order Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ...................................... -->
+
+ <section id="feature" class="feature-section">
+  <h1 class="heading">Features</h1>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-4 position-relative">
+        <img class="img mt-5" src="feature.png" alt="feature">
+        <div class="overlay">
+          <h3>Feature 1</h3>
+          <p>Description of feature 1</p>
+        </div>
+      </div>
+      <div class="col-md-4 position-relative">
+        <img class="img mt-5" src="feature.png" alt="feature">
+        <div class="overlay">
+          <h3>Feature 2</h3>
+          <p>Description of feature 2</p>
+        </div>
+      </div>
+      <div class="col-md-4 position-relative">
+        <img class="img mt-5" src="feature.png" alt="feature">
+        <div class="overlay">
+          <h3>Feature 3</h3>
+          <p>Description of feature 3</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ............................................... -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h4>Contact Us</h4>
+        <p>Email: info@interiorplus.com</p>
+        <p>Phone: +1234567890</p>
+        <p>Address: 123 Main Street, City, Country</p>
+      </div>
+      <div class="col-md-6">
+        <h4>Follow Us</h4>
+        <ul class="social-icons">
+          <li><a href="#"><i class="fab fa-facebook-f"></i>   www.facebook.com</a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i>   www.twitter.com</a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i>   www.instagram.com</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  window.addEventListener('scroll', function() {
+    var navbar = document.querySelector('.navbar');
+    if (window.scrollY > 20) {
+      navbar.classList.add('colorful');
+    } else {
+      navbar.classList.remove('colorful');
+    }
+  });
+
+  
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+
+</body>
+</html>
